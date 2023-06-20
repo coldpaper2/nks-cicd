@@ -36,7 +36,7 @@ spec:
         stage('Main') {
             steps {
                 container(name: 'kaniko') {
-                sh 'executor --dockerfile=go-test/Dockerfile \
+                sh 'executor --dockerfile=Dockerfile \
                     --context=git://github.com/coldpaper2/nks-cicd.git \
                     --destination=mhkim1560/jenkins-test:test${BUILD_NUMBER}'
             }
